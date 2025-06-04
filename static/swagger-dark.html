@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snubs API Docs</title>
+  <link rel="stylesheet" type="text/css" href="/static/swagger-ui.css" />
+  <link rel="stylesheet" type="text/css" href="/static/swagger-dark.css" />
+  <style>
+    html, body { background: #222 !important; }
+  </style>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="/static/swagger-ui-bundle.js"></script>
+  <script src="/static/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.onload = function() {
+      window.ui = SwaggerUIBundle({
+        url: "/openapi.json",
+        dom_id: '#swagger-ui',
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "StandaloneLayout"
+      });
+    }
+  </script>
+</body>
+</html>
